@@ -1,0 +1,26 @@
+load-svg tolman.svg 1.9231
+set-scale-bars 20
+set-title Sunburst maze
+place-agent-at-start-of-svg-path outbound
+set-origin
+set-trial-phase dark-gray Initial excursion
+set-arena-from-svg-layer train
+trigger-reward food
+follow-trajectory-from-svg-path outbound
+set-arena-from-svg-layer test
+add-labels-from-svg-layer test
+follow-trajectory-from-svg-path inbound
+set-trial-phase blue Attempted return to goal
+set-fence-from-svg-path fence1
+set-fence-from-svg-path fence2
+set-fence-from-svg-path fence3
+set-fence-from-svg-path fence4
+set-fence-from-svg-path fence5
+set-fence-from-svg-path fence6
+set-fence-from-svg-path fence7
+set-fence-from-svg-path fence8
+set-fence-from-svg-path fence9
+set-fence-from-svg-path fence10
+set-fence-from-svg-path fence11
+set-fence-from-svg-path fence12
+seek-reward food 100000

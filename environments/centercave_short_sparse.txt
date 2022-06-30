@@ -1,0 +1,14 @@
+load-svg centercave.svg 2.1758
+set-scale-bars 30
+set-title Cave in a sparsely explored forest environment with novel shortcuts
+set-arena-from-svg-layer arena
+place-agent-at-start-of-svg-path sparse
+set-origin
+set-trial-phase dark-gray Initial excursion
+trigger-reward nest
+follow-trajectory-from-svg-path sparse
+set-trial-phase dark-gray Perimeter
+sample-perimeter-from-svg-path perimeter
+set-trial-phase blue Attempted return to goal
+set-arena-from-svg-layer shortcuts
+seek-reward nest 100000

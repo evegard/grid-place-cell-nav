@@ -1,0 +1,13 @@
+load-svg alvernhe.svg 1
+set-title Detour maze, short version
+place-agent-at-start-of-svg-path training_path
+set-origin
+set-trial-phase dark-gray Initial excursion
+set-arena-from-svg-layer train
+add-labels-from-svg-layer train
+trigger-reward food
+follow-trajectory-from-svg-path training_path
+set-arena-from-svg-layer short
+add-labels-from-svg-layer short
+set-trial-phase blue Attempted return to goal
+seek-reward food 100000

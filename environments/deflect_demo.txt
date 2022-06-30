@@ -1,0 +1,10 @@
+load-svg deflect_demo.svg 1
+set-title Deflect demo
+set-arena-from-svg-layer arena
+place-agent-at-start-of-svg-path outbound
+set-origin
+set-trial-phase dark-gray Outbound journey
+trigger-reward food
+follow-trajectory-from-svg-path outbound
+set-trial-phase blue Return to goal
+seek-reward food 100000

@@ -1,12 +1,9 @@
-Navigating with grid and place cells in cluttered environments
-==============================================================
+Navigating with grid and place cells in cluttered environments (Edvardsen et al., 2020)
+=======================================================================================
 
-This code implements the combined grid and place cell-based navigation
-model presented in the paper [Edvardsen et al. (2020)](https://onlinelibrary.wiley.com/doi/full/10.1002/hipo.23147):
-
-> Edvardsen, Vegard, Bicanski, Andrej, & Burgess, Neil (2020).
-> [Navigating with grid and place cells in cluttered environments](https://onlinelibrary.wiley.com/doi/full/10.1002/hipo.23147).
-> _Hippocampus_, 30(3), 220-232.
+This code implements the combined grid and place cell-based navigation model
+presented in the following paper:
+[Edvardsen, Vegard, Bicanski, Andrej, & Burgess, Neil (2020). Navigating with grid and place cells in cluttered environments. _Hippocampus_, 30(3), 220-232.](https://onlinelibrary.wiley.com/doi/full/10.1002/hipo.23147)
 
 Setting up
 ----------
@@ -14,7 +11,7 @@ Setting up
 The code has been verified to run on Ubuntu 20.04.4 LTS.
 
 - Install dependencies:
-  - `sudo apt install build-essential gnuplot libboost-dev python-pil.imagetk`
+  - `sudo apt install build-essential inkscape gnuplot libboost-dev python-pil.imagetk`
 - Build the simulation program (`ratnav`):
   - `make`
 - Create a FIFO pipe that will be used to connect the simulator to the visualization UI:
@@ -44,10 +41,10 @@ directly into the `stdin` input of `ratnav` (see below).
 Running the simulation
 ----------------------
 
-The following commands show how to run the simulator while _visualizing_ the
+The following commands show how to run the simulator while visualizing the
 live simulation state in a separate window alongside the simulation terminal.
 
-In order to enable this, the simulation program `ratnav` will regularly send
+In order to do this, the simulation program `ratnav` will regularly send
 rendering/plotting commands to the FIFO pipe `plot_pipe`. In order for this
 live visualization/"live plot" functionality to work as expected, you need to
 run the visualization GUI script script `show_plot.py` in a concurrent process.
@@ -69,7 +66,8 @@ The following figure gives an overview of the code files and how they relate to
 the major parts of the model (as presented in Fig. 1C in the paper).
 
 ![Overview of code files, based on Fig. 1C from Edvardsen et al. (2020), CC BY 4.0](overview.png)
-_(Overview of code files, based on Fig. 1C from Edvardsen et al. (2020), CC BY 4.0)_
+
+_(Based on Fig. 1C from Edvardsen et al. (2020), CC BY 4.0)_
 
 License
 -------

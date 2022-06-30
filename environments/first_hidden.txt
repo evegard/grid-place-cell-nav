@@ -1,0 +1,13 @@
+load-svg first.svg 1.6667
+set-scale-bars 20
+set-title Diverse obstacles environment
+set-arena-from-svg-layer arena-shifted
+place-agent-at-start-of-svg-path outbound-shifted
+set-origin
+set-trial-phase dark-gray Initial excursion
+trigger-reward nest
+follow-trajectory-from-svg-path outbound-shifted
+set-trial-phase dark-gray Perimeter
+sample-perimeter-from-svg-path perimeter
+set-trial-phase blue Attempted return to goal
+seek-reward nest 100000
